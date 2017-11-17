@@ -1,0 +1,22 @@
+{
+  "name": "highstock-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8.7.0"
+  },
+  "author": "Azralmukmin Azmi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.2",
+    "socket.io": "^2.0.4"
+  }
+}
