@@ -15,7 +15,10 @@ socket.on('disconnect', function () {
 
 socket.on('initData', function (dataDB) {
     console.log('initData', dataDB);
-
+    if (dataDB.length == 0) {
+        dataDB = [{x: Date.now() + 28800000, y:null}];       
+    };
+    console.log('initData2', dataDB);
     initHighChart.addSeries({
         name: 'Temperature',
         data: dataDB,
@@ -30,7 +33,7 @@ socket.on('initData', function (dataDB) {
 socket.on('addData', function (dataDB) {
     console.log('Data incoming');
     console.log('addData', dataDB);
-    initHighChart.series[0].addPoint([dataDB.x, dataDB.y], true, true);
+    initHighChart.series[0].addPoint([dataDB.x, dataDB.y], true, false);
 });
 
 // Create the chart
